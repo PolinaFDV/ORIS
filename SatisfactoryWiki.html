@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Official Satisfactory Wiki</title>
+    <style>
+        @font-face {
+            font-family: "Satisfontory";
+            src: url("images/wiki/Satisfontory_v1.5.ttf");
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .articles .img-discription img {
+            width: 200px;
+            justify-content: flex-end;
+        }
+
+        .articles .img-discription {
+            justify-content: space-between;
+            text-align: center;
+        }
+
+        .articles .img-discription a {
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        body {
+            font-family: "Noto Sans", system-ui, sans-serif;
+            background-color: black;
+            color: aliceblue;
+            margin: 0;
+            padding: 0;
+        }
+
+        .link {
+            color: aliceblue;
+            text-decoration: none;
+        }
+
+        .main--text a {
+            color: #e59344;
+            text-decoration: none;
+        }
+
+        header {
+            padding: 3px 12px;
+            background-color: rgb(10, 10, 58);
+            display: flex;
+            align-items: center;
+            position: fixed;
+            justify-content: space-between;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .header--left {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        #header-logo {
+            width: 110px;
+        }
+
+        .header--indiedeals {
+            background-color: rgba(240, 248, 255, 0.195);
+            padding: 0px 10px;
+            border-radius: 5px;
+        }
+
+        #header-indiedeals-picture {
+            width: 15px;
+            position: relative;
+            top: 2px;
+        }
+
+        .header--right {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            white-space: nowrap;
+            gap: 10px;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .current-theme {
+            position: relative;
+            left: -25px;
+            top: 2px;
+        }
+
+        .current-theme::after {
+            height: 21px;
+            width: 1px;
+            background-color: rgba(240, 248, 255, 0.195);
+            content: "";
+            position: absolute;
+            left: 40px;
+            top: -2px;
+        }
+
+        .current-theme img {
+            width: 23px;
+        }
+
+        .satisfactory-wiki a {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0 4px 0;
+        }
+
+        .satisfactory-wiki a img {
+            width: 250px;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 15px;
+            margin: 0 15px;
+        }
+
+        .links-to-resources {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            margin-bottom: 10px;
+            color: #fff;
+            background-color: rgb(23, 22, 22);
+            border-radius: 10px;
+        }
+
+        .main--text .container {
+            background-color: rgb(52, 53, 53);
+            padding: 0;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+
+        .main--text--left .container {
+            margin: 10px 5px 10px 30px;
+        }
+
+        .main--text--right .container {
+            margin: 10px 30px 10px 5px;
+        }
+
+        .name-of-links {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .name {
+            margin: 10px 0;
+            font-weight: 400;
+        }
+
+        .main--text .first-name {
+            display: flex;
+            text-align: center;
+            font-family: 'Satisfontory', "Noto Sans", system-ui, sans-serif;
+            font-size: 35px;
+            margin: 0px 0 15px;
+            padding: 0px 0 10px;
+            position: relative;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            color: #fff;
+            background-image: linear-gradient(180deg, rgba(70, 84, 97, 0.95) 50%, rgba(79, 65, 54, 0.95) 100%), url(images/wiki/Texture.png);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main--text .first-name .name-line {
+            position: absolute;
+            width: 2px;
+            top: 35px;
+            right: 100px;
+        }
+
+        .main--text .first-name .name-bolt-left {
+            position: absolute;
+            width: 20px;
+            top: 84px;
+        }
+
+        .main--text .first-name .name-bolt-right {
+            position: absolute;
+            width: 20px;
+            top: 84px;
+            left: 628px;
+        }
+
+        .main--text .first-name .name-decoration {
+            position: absolute;
+            width: 35px;
+            top: -3px;
+            left: -3px;
+        }
+
+        .main--text .name .name-line {
+            position: absolute;
+            width: 2px;
+            top: 10px;
+            left: 10px;
+        }
+
+        .main--text .name .name-bolt-left {
+            position: absolute;
+            width: 15px;
+            top: 22px;
+            left: 0px;
+        }
+
+        .main--text .name .name-bolt-right {
+            position: absolute;
+            width: 15px;
+            top: 22px;
+            left: 634px;
+        }
+
+        .main--text .name .name-decoration {
+            position: absolute;
+            width: 23px;
+            top: -1px;
+            left: -2px;
+        }
+
+        .main--text .name {
+            display: flex;
+            justify-content: center;
+            font-family: 'Satisfontory', "Noto Sans", system-ui, sans-serif;
+            font-size: 25px;
+            position: relative;
+            text-align: center;
+            margin: 0;
+            padding: 5px;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            color: #fff;
+            background-image: linear-gradient(180deg, rgba(70, 84, 97, 0.95) 50%, rgba(79, 65, 54, 0.95) 100%), url(images/wiki/Texture.png);
+            align-items: center;
+        }
+
+        .main--text .name::after {
+            background-image: url(images/wiki/Texture.png);
+            content: "";
+            width: 100%;
+            height: 100%;
+            opacity: 5%;
+            top: 0px;
+            position: absolute;
+        }
+
+        .name-of-links:not(.main--text)::after {
+            content: "";
+            background-color: #e59344;
+            position: absolute;
+            width: 150px;
+            height: 1px;
+            left: 0px;
+            top: 35px;
+        }
+
+        .info {
+            padding: 0px 5px;
+            margin: 0px;
+        }
+
+        .list {
+            list-style: none;
+            font-size: 14px;
+            margin: 0;
+            padding: 0 7px 5px 7px;
+        }
+
+        .articles .info--list {
+            display: flex;
+            list-style: none;
+            padding: 5px 0;
+            align-items: center;
+        }
+
+        .social--media .info--list {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .social--media .info--list a img {
+            width: 50px;
+        }
+
+        .features .info--list {
+            margin: 0;
+            padding: 5px 15px;
+        }
+
+        .list a {
+            color: #e59344;
+            font-size: small;
+            font-weight: 600;
+        }
+
+        .main-page {
+            background-color: rgb(23, 22, 22);
+            border-radius: 25px;
+        }
+
+        .second--header--top {
+            display: flex;
+            margin: 4px 25px;
+            justify-content: space-between;
+            position: relative;
+            align-items: center;
+        }
+
+        .second--header--top::after {
+            content: "";
+            background-color: #e59344;
+            width: 104%;
+            height: 0.5px;
+            position: absolute;
+            left: -24px;
+            top: 36px;
+        }
+
+        .second--header--left ul,
+        .second--header--right ul {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .second--header--left .list,
+        .second--header--right .list {
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        .second--header--left :not(.orange-block),
+        .second--header--right :not(.orange-block) {
+            color: #e59344;
+        }
+
+        .orange-block {
+            background-color: #e59344;
+            color: rgb(43, 41, 41);
+            padding: 10px;
+        }
+
+        #search {
+            background-color: rgb(50, 48, 48);
+            border-color: #e59344;
+            width: 280px;
+            height: 30px;
+            border-width: 1px;
+            font-size: 15px;
+            padding: 0px 5px;
+            position: relative;
+        }
+
+        .search-img {
+            position: absolute;
+            left: 1141px;
+            top: 5px;
+            width: 18px;
+            background-color: rgb(40, 38, 38);
+        }
+
+        .add {
+            margin: 27px 250px;
+        }
+
+        .add img {
+            height: 100px;
+            border: 2px dashed rgb(46, 46, 45);
+        }
+
+        .main--text {
+            display: grid;
+            grid-template-columns: 2.5fr 2fr;
+            align-items: start;
+        }
+
+        .main--text--right {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .welcome .info {
+            text-align: center;
+        }
+
+        #Update1-2 {
+            width: 300px;
+            justify-content: center;
+        }
+
+        .updates {
+            text-align: center;
+        }
+
+        .featured--video {
+            text-align: center;
+            position: relative;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Satisfontory', "Noto Sans", system-ui, sans-serif;
+            font-size: 25px;
+            text-align: center;
+            margin: 0;
+            padding: 8px 0 10px;
+            position: relative;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            color: #fff;
+            background-image: linear-gradient(180deg, rgba(70, 84, 97, 0.95) 50%, rgba(79, 65, 54, 0.95) 100%), url(images/wiki/Texture.png);
+        }
+
+        .section-header .name-line {
+            position: absolute;
+            width: 2px;
+            top: 10px;
+            left: 10px;
+        }
+
+        .section-header .name-bolt-left {
+            position: absolute;
+            width: 15px;
+            top: 22px;
+            left: 0px;
+        }
+
+        .section-header .name-bolt-right {
+            position: absolute;
+            width: 15px;
+            top: 22px;
+            left: 634px;
+        }
+
+        .section-header .name-decoration {
+            position: absolute;
+            width: 23px;
+            top: -1px;
+            left: -2px;
+        }
+
+        .section-header::after {
+            background-image: url(images/wiki/Texture.png);
+            content: "";
+            width: 100%;
+            height: 100%;
+            opacity: 5%;
+            top: 0px;
+            position: absolute;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+
+        .navigation-block {
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: 70px 1fr 90px;
+            grid-auto-rows: 38px;
+            align-items: center;
+            margin: 0 25px 20px;
+        }
+
+        .nav-grid>div {
+            border-bottom: 1px solid #e59344;
+            padding: 8px 10px;
+            font-size: 14px;
+            color: #ddd;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-grid>div:nth-child(3n+1) {
+            justify-content: flex-start;
+            gap: 4px;
+        }
+
+        .nav-grid>div:nth-child(3n+2) {
+            justify-content: center;
+            text-align: center;
+        }
+
+        .nav-grid>div:nth-child(3n) {
+            justify-content: flex-end;
+        }
+
+        .nav-grid a {
+            color: #e59344;
+            text-decoration: none;
+        }
+
+        .nav-grid a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-dot {
+            color: #6a9ec9;
+            margin: 0 2px;
+        }
+
+        .community-section {
+            background-color: rgb(52, 53, 53);
+            border-radius: 30px 30px 5px 5px;
+            margin: 10px 0 20px;
+            overflow: hidden;
+        }
+
+        .community-buttons-row {
+            display: flex;
+            justify-content: space-around;
+            gap: 25px;
+            padding: 25px 40px 15px;
+        }
+
+        .community-buttons-row a {
+            flex: 1;
+            text-align: center;
+            padding: 16px 0;
+            background-color: #1c1c1c;
+            border: 2px solid #e59344;
+            border-radius: 40px;
+            color: #e59344;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .community-note {
+            text-align: center;
+            margin: 10px 30px 25px;
+            font-size: 15px;
+            color: #eee;
+        }
+
+        .community-create {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 30px 25px;
+        }
+
+        .community-create input {
+            width: 55%;
+            max-width: 520px;
+            height: 34px;
+            background-color: #1c1c1c;
+            border: 1px solid #e59344;
+            color: #fff;
+            padding: 0 10px;
+            font-size: 14px;
+        }
+
+        .community-create button {
+            height: 36px;
+            padding: 0 22px;
+            background-color: #d5d5d5;
+            color: #222;
+            border: 1px solid #888;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-left: 4px;
+        }
+
+        .community-list {
+            list-style: disc;
+            margin: 0 30px 15px;
+            padding-left: 22px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #eee;
+        }
+
+        .community-list ul {
+            list-style: circle;
+            margin: 6px 0 0;
+            padding-left: 28px;
+            color: #cfcfcf;
+        }
+
+        .community-list ul li {
+            margin-bottom: 10px;
+        }
+
+        .community-sections {
+            text-align: right;
+            font-size: 14px;
+            margin: 15px 30px 10px;
+            color: #ddd;
+        }
+
+        .community-sections a {
+            color: #e59344;
+            text-decoration: none;
+        }
+
+        .category-line {
+            margin: 15px 30px 30px;
+            padding: 12px 15px;
+            border: 1px solid #e59344;
+            border-radius: 3px;
+            color: #e59344;
+            font-size: 14px;
+        }
+
+        .category-line a {
+            color: #e59344;
+            text-decoration: none;
+        }
+
+        .ad-banner {
+            margin: 10px 25px 20px;
+            background-color: #4a0f24;
+            border: 1px solid #6a1533;
+            border-radius: 5px;
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .ad-banner img {
+            height: 55px;
+        }
+
+        .ad-banner-text {
+            color: #fff;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .ad-banner-text b {
+            font-size: 16px;
+        }
+
+        .ad-banner-text a {
+            color: #e59344;
+            text-decoration: none;
+        }
+
+        .page-footer {
+            margin: 20px 15px 90px;
+            padding: 25px 30px;
+            background-color: rgb(23, 22, 22);
+            border-radius: 15px;
+            font-size: 14px;
+            color: #ddd;
+            line-height: 1.6;
+            width: calc(100% - 30px);
+        }
+
+        .page-footer p {
+            margin: 6px 0;
+        }
+
+        .page-footer a {
+            color: #e59344;
+            text-decoration: none;
+        }
+
+        .footer-links-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 25px;
+            align-items: center;
+        }
+
+        .footer-links-row a {
+            color: #e59344;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-icons-row {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 20px;
+            align-items: center;
+        }
+
+        .footer-icons-row img {
+            height: 32px;
+        }
+
+        .wiki-gg-fab {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+            overflow: hidden;
+        }
+
+        .wiki-gg-fab img {
+            width: 70%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header--left">
+            <a href="https://satisfactory.wiki.gg/"><img id="header-logo" src="images/wiki/Network_header_logo.svg"
+                    alt="logo"></a>
+            <div class="header--indiedeals">
+                <a href="https://www.indiedeals.gg/"><img id="header-indiedeals-picture"
+                        src="images/wiki/Network_indiedeals_logo.webp" alt="indiedeals"></a>
+                <a class="link" href="https://www.indiedeals.gg/">Indie game deals</a>
+            </div>
+        </div>
+        <ul class="header--right">
+            <li><a class="current-theme"><img src="images/wiki/moon.png" alt="theme"></a></li>
+            <li><a class="link"
+                    href="https://satisfactory.wiki.gg/wiki/Special:CreateAccount?returnto=Satisfactory+Wiki">Create
+                    account</a></li>
+            <li><a class="link"
+                    href="https://satisfactory.wiki.gg/wiki/Special:UserLogin?returnto=Satisfactory+Wiki">Log in</a>
+            </li>
+        </ul>
+    </header>
+
+    <div class="satisfactory-wiki">
+        <a href="https://satisfactory.wiki.gg/"><img src="images/wiki/satisfactory-wiki.png"
+                alt="satisfactory wiki"></a>
+    </div>
+
+    <main>
+        <div class="links-to-resources">
+            <div class="container">
+                <div class="name-of-links">
+                    <p class="name">Navigation</p>
+                </div>
+                <ul class="list">
+                    <li><a class="link" href="https://satisfactory.wiki.gg/">Main page</a></li>
+                    <li><a class="link"
+                            href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki:Community_portal">Community
+                            portal</a></li>
+                    <li><a class="link" href="https://satisfactory.wiki.gg/wiki/Special:RecentChanges">Recent
+                            changes</a></li>
+                    <li><a class="link" href="https://satisfactory.wiki.gg/wiki/Special:Random">Random page</a></li>
+                    <li><a class="link"
+                            href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki:Admin_noticeboard">Admin
+                            noticeboard</a></li>
+                    <li><a class="link" href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki:Rules">Wiki rules</a>
+                    </li>
+                    <li><a class="link" href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki:Style_guide">Style
+                            guide</a></li>
+                </ul>
+            </div>
+            <div class="container">
+                <div class="name-of-links">
+                    <p class="name">Useful pages</p>
+                </div>
+                <ul class="list">
+                    <li><a class="link" href="https://satisfactory.wiki.gg/wiki/Category:Buildings">Buildings</a></li>
+                    <li><a class="link" href="https://satisfactory.wiki.gg/wiki/Category:Items">Items</a></li>
+                    <li><a class="link" href="https://satisfactory.wiki.gg/wiki/Category:Fluids">Fluids</a></li>
+                    <li><a class="link" href="https://satisfactory.wiki.gg/wiki/Milestones">Milestones</a></li>
+                    <li><a class="link" href="https://satisfactory.wiki.gg/wiki/MAM">MAM</a></li>
+                    <li><a class="link" href="https://satisfactory.wiki.gg/wiki/AWESOME_Sinks">AWESOME Sink</a></li>
+                    <li><a class="link" href="https://satisfactory.wiki.gg/wiki/Space_Elevator">Space Elevator</a></li>
+                    <li><a class="link" href="https://satisfactory.wiki.gg/wiki/Power">Power</a></li>
+                    <li><a class="link" href="https://satisfactory.wiki.gg/wiki/Future_content">Future content</a></li>
+                    <li><a class="link" href="https://satisfactory.wiki.gg/wiki/Online_tools">Community tools</a></li>
+                </ul>
+            </div>
+            <div class="container">
+                <div class="name-of-links">
+                    <p class="name">Satisfactory links</p>
+                </div>
+                <ul class="list">
+                    <li><a class="link" href="https://www.satisfactorygame.com/">Official website</a></li>
+                    <li><a class="link" href="https://questions.satisfactorygame.com/">Q&A site</a></li>
+                    <li><a class="link" href="https://lizarddoggo.com/">Official merch</a></li>
+                    <li><a class="link" href="https://store.steampowered.com/app/526870/Satisfactory/">Steam</a></li>
+                    <li><a class="link" href="https://www.epicgames.com/store/en-US/product/satisfactory/home">Epic
+                            Games Store</a></li>
+                    <li><a class="link" href="https://www.humblebundle.com/store/satisfactory">Humble Bundle</a></li>
+                    <li><a class="link" href="https://www.xbox.com/en-US/games/store/satisfactory/9NPR2CG6S95Q">Xbox</a>
+                    </li>
+                    <li><a class="link"
+                            href="https://store.playstation.com/en-us/product/UP4664-PPSA16634_00-SATISFACTORYGAME">PlayStation</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="container">
+                <div class="name-of-links">
+                    <p class="name">Tools</p>
+                </div>
+                <ul class="list">
+                    <li><a class="link"
+                            href="https://satisfactory.wiki.gg/wiki/Special:WhatLinksHere/Satisfactory_Wiki">What links
+                            here</a></li>
+                    <li><a class="link" href="https://satisfactory.wiki.gg/wiki/Special:NewPage">New page</a></li>
+                    <li><a class="link" href="https://satisfactory.wiki.gg/wiki/Special:SpecialPages">Special pages</a>
+                    </li>
+                    <li><a class="link"
+                            href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki?action=dbdata">Database data</a>
+                    </li>
+                    <li><a class="link" href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki?action=info">Page
+                            information</a></li>
+                    <li><a class="link"
+                            href="https://satisfactory.wiki.gg/wiki/Special:CiteThisPage?page=Satisfactory_Wiki&id=56208&wpFormIdentifier=titleform">Cite
+                            this page</a></li>
+                    <li><a class="link" href="https://satisfactory.wiki.gg/#">Expand all</a></li>
+                </ul>
+            </div>
+            <div class="container">
+                <div class="name-of-links">
+                    <p class="name">In other languages</p>
+                </div>
+                <ul class="list">
+                    <li><a class="link" href="https://satisfactory.wiki.gg/de/wiki/">Deutsch</a></li>
+                    <li><a class="link" href="https://satisfactory.wiki.gg/fr/wiki/">Français</a></li>
+                    <li><a class="link" href="https://satisfactory.wiki.gg/ru/wiki/">Русский</a></li>
+                    <li><a class="link" href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki/pt">Português</a></li>
+                    <li><a class="link" href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki/it">Italiano</a></li>
+                    <li><a class="link" href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki/zh">中文</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-page">
+            <div class="second--header">
+                <div class="second--header--top">
+                    <div class="second--header--left">
+                        <ul>
+                            <li><a class="orange-block list" href="https://satisfactory.wiki.gg/">Main page</a></li>
+                            <li><a class="list"
+                                    href="https://satisfactory.wiki.gg/wiki/Talk:Satisfactory_Wiki">Discussion</a></li>
+                        </ul>
+                    </div>
+                    <div class="second--header--right">
+                        <ul>
+                            <li><a class="orange-block list" href="https://satisfactory.wiki.gg/">Read</a></li>
+                            <li><a class="list"
+                                    href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki?action=edit">View
+                                    source</a></li>
+                            <li><a class="list"
+                                    href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki?action=history">View
+                                    history</a></li>
+                            <li>
+                                <input type="search" placeholder="Search Satisfactory Wiki" name="Search" id="search">
+                                <img class="search-img" src="images/wiki/search.svg" alt="search img">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="second--header--bottom">
+                    <div class="add">
+                        <a href="#"><img src="images/wiki/add.png" alt="add"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ad-banner">
+                <img src="images/wiki/front.png" alt="satellite">
+                <div class="ad-banner-text">
+                    <b>wiki.gg SATELLITE #4 accepting responses:</b><br>
+                    Help improve wiki.gg by <a href="#">filling out a survey!</a>
+                </div>
+            </div>
+
+            <div class="main--text">
+                <div class="main--text--left links-to-resources">
+                    <div class="container welcome">
+                        <div class="name-of-container">
+                            <p class="first-name">
+                                Welcome to the official Satisfactory Wiki
+                                <img class="name-decoration" src="images/wiki/Corner_top_left.png" alt="">
+                            </p>
+                        </div>
+                        <div class="info">
+                            <p>the Satisfactory guide and information source written and maintained by the community.
+                            </p>
+                            <p>We are currently maintaining <a
+                                    href="https://satisfactory.wiki.gg/wiki/Special:Statistics">9,466 pages (865
+                                    articles).</a></p>
+                            <p>Please feel free to contribute by creating new articles or expanding existing ones.</p>
+                            <p>Also check out the wiki in other languages:</p>
+                            <p><a href="https://satisfactory.wiki.gg/de/wiki/">Deutsch</a> • <a
+                                    href="https://satisfactory.wiki.gg/fr/wiki/">Français</a> • <a
+                                    href="https://satisfactory.wiki.gg/ru/wiki/">Русский</a></p>
+                            <p><a href="https://satisfactory.wiki.gg/wiki/Category:Translation_projects">other
+                                    translation projects</a></p>
+                        </div>
+                    </div>
+                    <div class="container about">
+                        <div class="name-of-container">
+                            <p class="name">
+                                About Satisfactory
+                                <img class="name-decoration" src="images/wiki/Corner_top_left.png" alt="">
+                            </p>
+                        </div>
+                        <div class="info">
+                            <p><a href="https://satisfactory.wiki.gg/wiki/Satisfactory">Satisfactory</a> is a game from
+                                <a href="https://satisfactory.wiki.gg/wiki/Coffee_Stain_Studios">Coffee Stain
+                                    Studios</a>, the creators of <a
+                                    href="https://en.wikipedia.org/wiki/Goat_Simulator">Goat Simulator</a> and the <a
+                                    href="https://sanctum.gamepedia.com/">Sanctum</a> series. Satisfactory is a game of
+                                factory management and planet exploitation. As a pioneer working for <a
+                                    href="https://satisfactory.wiki.gg/wiki/FICSIT_Inc.">FICSIT Inc.</a>, you are
+                                dropped onto an alien planet with a handful of tools and must harvest the planet's
+                                natural resources to construct increasingly complex factories for automating all your
+                                resources needs. After you are set up, it will be time to build the <a
+                                    href="https://satisfactory.wiki.gg/wiki/Space_Elevator">Space Elevator</a> and begin
+                                Project Assembly, supplying FICSIT with increasingly numerous and complex components for
+                                their unknown purposes.</p>
+                            <p>The main focus of the game lies in constructing <a
+                                    href="https://satisfactory.wiki.gg/wiki/Buildings">buildings</a> and linking them
+                                together with <a href="https://satisfactory.wiki.gg/wiki/Conveyor_Belts">Conveyor
+                                    Belts</a> so that your factory can handle the entire process of item construction
+                                for you, including mining, transport, delivery, and generating <a
+                                    href="https://satisfactory.wiki.gg/wiki/Power">power</a> to keep itself running.
+                                More advanced pioneers will precisely adjust their buildings' <a
+                                    href="https://satisfactory.wiki.gg/wiki/Clock_speed">clock speed</a> to maximize
+                                efficiency.</p>
+                        </div>
+                    </div>
+                    <div class="container features">
+                        <div class="name-of-container">
+                            <p class="name">
+                                FEATURES
+                                <img class="name-decoration" src="images/wiki/Corner_top_left.png" alt="">
+                            </p>
+                        </div>
+                        <div class="info">
+                            <ul class="info--list">
+                                <li>A variety of item and fluid logistics including <a
+                                        href="https://satisfactory.wiki.gg/wiki/Conveyor_Belts">Conveyor Belts</a>, <a
+                                        href="https://satisfactory.wiki.gg/wiki/Conveyor_Lift">Lifts</a>, <a
+                                        href="https://satisfactory.wiki.gg/wiki/Pipeline">Pipes</a> and more; all for
+                                    transporting resources, components, fluids or yourself around.</li>
+                                <li><a href="https://satisfactory.wiki.gg/wiki/Buildings">Buildings</a> for automated
+                                    production of items. Hunt down <a
+                                        href="https://satisfactory.wiki.gg/wiki/Power_Slug">Power Slugs</a> and <a
+                                        href="https://satisfactory.wiki.gg/wiki/Somersloop">Somersloops</a> to improve
+                                    their <a href="https://satisfactory.wiki.gg/wiki/Clock_speed">performance</a>.</li>
+                                <li>A vast alien <a href="https://satisfactory.wiki.gg/wiki/World">world</a> to explore
+                                    and exploit, featuring beautiful vistas and curious <a
+                                        href="https://satisfactory.wiki.gg/wiki/Creatures">creatures</a>, including the
+                                    community favorite <a href="https://satisfactory.wiki.gg/wiki/Lizard_Doggo">Lizard
+                                        Doggo</a>.</li>
+                                <li><a href="https://satisfactory.wiki.gg/wiki/Vehicles">Vehicles</a>, including <a
+                                        href="https://satisfactory.wiki.gg/wiki/Truck">trucks</a> and <a
+                                        href="https://satisfactory.wiki.gg/wiki/Electric_Locomotive">trains</a> for
+                                    transporting yourself and large quantities of resources over great distances.</li>
+                                <li>A <a href="https://satisfactory.wiki.gg/wiki/Story">story</a> to uncover - what is
+                                    the 'Save the Day' program, and why is FICSIT counting on you?</li>
+                                <li><a href="https://satisfactory.wiki.gg/wiki/Arachnophobia_Mode">Arachnophobia
+                                        Mode</a>, to turn <a href="https://satisfactory.wiki.gg/wiki/Stinger">scary
+                                        spiders</a> into equally terrifying cat abominations.</li>
+                                <li>No base defense.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="container articles">
+                        <div class="name-of-container">
+                            <p class="name">
+                                FEATURED ARTICLES
+                                <img class="name-decoration" src="images/wiki/Corner_top_left.png" alt="">
+                            </p>
+                        </div>
+                        <div class="info">
+                            <ul class="info--list">
+                                <li class="img-discription"><a href="https://satisfactory.wiki.gg/wiki/Stinger"><img
+                                            src="images/wiki/200px-MAM.webp" alt="MAM"></a><a
+                                        href="https://satisfactory.wiki.gg/wiki/Stinger">MAM</a></li>
+                                <li class="img-discription"><a
+                                        href="https://satisfactory.wiki.gg/wiki/Coal-Powered_Generator"><img
+                                            src="images/wiki/200px-Coal-Powered_Generator.webp"
+                                            alt="Coal-Powered"></a><a
+                                        href="https://satisfactory.wiki.gg/wiki/Coal-Powered_Generator">Coal-Powered
+                                        Generator</a></li>
+                                <li class="img-discription"><a href="https://satisfactory.wiki.gg/wiki/Hard_Drive"><img
+                                            src="images/wiki/200px-Hard_Drive.webp" alt="Hard Drive"></a><a
+                                        href="https://satisfactory.wiki.gg/wiki/Hard_Drive">Hard Drive</a></li>
+                                <li class="img-discription"><a
+                                        href="https://satisfactory.wiki.gg/wiki/Lizard_Doggo"><img
+                                            src="images/wiki/200px-Lizard_Doggo.webp" alt="Lizard Doggo"></a><a
+                                        href="https://satisfactory.wiki.gg/wiki/Lizard_Doggo">Lizard Doggo</a></li>
+                                <li class="img-discription"><a href="https://satisfactory.wiki.gg/wiki/Power"><img
+                                            src="images/wiki/200px-Power_Line.webp" alt="Power"></a><a
+                                        href="https://satisfactory.wiki.gg/wiki/Power">Power</a></li>
+                                <li class="img-discription"><a
+                                        href="https://satisfactory.wiki.gg/wiki/Space_Elevator"><img
+                                            src="images/wiki/200px-Space_Elevator.webp" alt="Space Elevator"></a><a
+                                        href="https://satisfactory.wiki.gg/wiki/Space_Elevator">Space Elevator</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main--text--right links-to-resources">
+                    <div class="container updates">
+                        <div class="name-of-container">
+                            <p class="name">
+                                UPDATES
+                                <img class="name-decoration" src="images/wiki/Corner_top_left.png" alt="">
+                            </p>
+                        </div>
+                        <div class="info">
+                            <img id="Update1-2" src="images/wiki/600px-Update1.2_Sign_Logo.webp" alt="SATISFACTORY">
+                        </div>
+                        <div class="info">
+                            <p>Major update: <a href="https://satisfactory.wiki.gg/wiki/Patch_1.2.2.2">1.2 release</a>
+                                (released 113 days ago)</p>
+                            <p>Stable: <a href="https://satisfactory.wiki.gg/wiki/Patch_1.2.4.0">1.2.4.0</a> (released
+                                43 days ago)</p>
+                            <p>Experimental: <a href="https://satisfactory.wiki.gg/wiki/Patch_1.2.4.0">1.2.4.0</a>
+                                (released 43 days ago)</p>
+                            <p><a href="https://satisfactory.wiki.gg/wiki/Category:Patch_notes">Version history</a> • <a
+                                    href="https://satisfactory.wiki.gg/wiki/Future_content">Future content</a></p>
+                        </div>
+                    </div>
+                    <div class="container featured--video">
+                        <div class="name-of-container">
+                            <p class="name">FEATURED VIDEO</p>
+                        </div>
+                        <div class="info">
+                            <img id="Update1-2--trailer" src="images/wiki/hqdefault.jpg" alt="SATISFACTORY Trailer">
+                        </div>
+                    </div>
+                    <div class="container social--media">
+                        <div class="name-of-container">
+                            <p class="name">
+                                SOCIAL MEDIA
+                                <img class="name-decoration" src="images/wiki/Corner_top_left.png" alt="">
+                            </p>
+                        </div>
+                        <div class="info">
+                            <ul class="info--list">
+                                <li><a href="https://www.satisfactorygame.com/"><img
+                                            src="images/wiki/96px-Satisfactory_logo_full_color_square.webp"
+                                            alt="logo"></a></li>
+                                <li><a href="https://lizarddoggo.com/"><img src="images/wiki/200px-Lizard_Doggo.webp"
+                                            alt="Doggo"></a></li>
+                                <li><a href="https://store.steampowered.com/app/526870/Satisfactory/"><img
+                                            src="images/wiki/Steam.svg" alt="Steam"></a></li>
+                                <li><a href="https://www.epicgames.com/store/en-US/product/satisfactory/home"><img
+                                            src="images/wiki/Epic_Games.svg" alt="Epic Games"></a></li>
+                                <li><a href="https://www.humblebundle.com/store/satisfactory"><img
+                                            src="images/wiki/Humble.svg" alt="Humble"></a></li>
+                            </ul>
+                        </div>
+                        <div class="info">
+                            <div>
+                                <ul class="info--list">
+                                    <li><a href="https://www.youtube.com/CoffeeStainStudios"><img
+                                                src="images/wiki/YouTube.svg" alt="YouTube"></a></li>
+                                    <li><a href="https://www.twitch.tv/coffeestainstudiosdevs"><img
+                                                src="images/wiki/Twitch.svg" alt="Twitch"></a></li>
+                                    <li><a href="https://discord.gg/satisfactory"><img src="images/wiki/Discord.svg"
+                                                alt="Discord"></a></li>
+                                    <li><a href="https://www.facebook.com/SatisfactoryGame/"><img
+                                                src="images/wiki/Facebook.svg" alt="Facebook"></a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="info--list">
+                                    <li><a href="https://www.instagram.com/coffee_stain_studios/"><img
+                                                src="images/wiki/Instagram.svg" alt="Instagram"></a></li>
+                                    <li><a href="https://www.reddit.com/r/SatisfactoryGame/"><img
+                                                src="images/wiki/Reddit.svg" alt="Reddit"></a></li>
+                                    <li><a href="https://twitter.com/SatisfactoryAF/"><img src="images/wiki/X.svg"
+                                                alt="X"></a></li>
+                                    <li><a href="https://www.tiktok.com/@satisfactorygame"><img
+                                                src="images/wiki/TikTok.svg" alt="TikTok"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container navigation-block">
+                <div class="section-header">
+                    NAVIGATION
+                    <img class="name-line" src="images/wiki/Middle.png" alt="">
+                    <img class="name-bolt-left" src="images/wiki/Bolt.png" alt="">
+                    <img class="name-decoration" src="images/wiki/Corner_top_left.png" alt="">
+                </div>
+
+                <div class="nav-grid">
+                    <div>
+                        <a href="https://satisfactory.wiki.gg/wiki/Template:BuildingNav">v</a><span
+                            class="nav-dot">·</span><a
+                            href="https://satisfactory.wiki.gg/wiki/Template:BuildingNav?action=edit">e</a><span
+                            class="nav-dot">·</span><a
+                            href="https://satisfactory.wiki.gg/wiki/Template:BuildingNav?action=history">h</a>
+                    </div>
+                    <div><a href="https://satisfactory.wiki.gg/wiki/Buildings">Buildings</a></div>
+                    <div>[<a href="#">Expand</a>]</div>
+
+                    <div>
+                        <a href="https://satisfactory.wiki.gg/wiki/Template:PioneerNav">v</a><span
+                            class="nav-dot">·</span><a
+                            href="https://satisfactory.wiki.gg/wiki/Template:PioneerNav?action=edit">e</a><span
+                            class="nav-dot">·</span><a
+                            href="https://satisfactory.wiki.gg/wiki/Template:PioneerNav?action=history">h</a>
+                    </div>
+                    <div><a href="https://satisfactory.wiki.gg/wiki/Satisfactory">Satisfactory </a> game mechanics</div>
+                    <div>[<a href="#">Expand</a>]</div>
+
+                    <div>
+                        <a href="https://satisfactory.wiki.gg/wiki/Template:ItemNav">v</a><span
+                            class="nav-dot">·</span><a
+                            href="https://satisfactory.wiki.gg/wiki/Template:ItemNav?action=edit">e</a><span
+                            class="nav-dot">·</span><a
+                            href="https://satisfactory.wiki.gg/wiki/Template:ItemNav?action=history">h</a>
+                    </div>
+                    <div><a href="https://satisfactory.wiki.gg/wiki/Items">Items</a> and <a
+                            href="https://satisfactory.wiki.gg/wiki/Fluids">Fluids</a></div>
+                    <div>[<a href="#">Expand</a>]</div>
+
+                    <div>
+                        <a href="https://satisfactory.wiki.gg/wiki/Template:LifeNav">v</a><span
+                            class="nav-dot">·</span><a
+                            href="https://satisfactory.wiki.gg/wiki/Template:LifeNav?action=edit">e</a><span
+                            class="nav-dot">·</span><a
+                            href="https://satisfactory.wiki.gg/wiki/Template:LifeNav?action=history">h</a>
+                    </div>
+                    <div><a href="https://satisfactory.wiki.gg/wiki/Flora">Flora</a> and <a
+                            href="https://satisfactory.wiki.gg/wiki/Fauna">Fauna</a></div>
+                    <div>[<a href="#">Expand</a>]</div>
+
+                    <div>
+                        <a href="https://satisfactory.wiki.gg/wiki/Template:VehicleNav">v</a><span
+                            class="nav-dot">·</span><a
+                            href="https://satisfactory.wiki.gg/wiki/Template:VehicleNav?action=edit">e</a><span
+                            class="nav-dot">·</span><a
+                            href="https://satisfactory.wiki.gg/wiki/Template:VehicleNav?action=history">h</a>
+                    </div>
+                    <div><a href="https://satisfactory.wiki.gg/wiki/Vehicles">Transportation</a></div>
+                    <div>[<a href="#">Expand</a>]</div>
+
+                    <div>
+                        <a href="https://satisfactory.wiki.gg/wiki/Template:PatchesNav">v</a><span
+                            class="nav-dot">·</span><a
+                            href="https://satisfactory.wiki.gg/wiki/Template:PatchesNav?action=edit">e</a><span
+                            class="nav-dot">·</span><a
+                            href="https://satisfactory.wiki.gg/wiki/Template:PatchesNav?action=history">h</a>
+                    </div>
+                    <div><a href="https://satisfactory.wiki.gg/wiki/Category:Patch_notes">Patches</a></div>
+                    <div>[<a href="#">Expand</a>]</div>
+                </div>
+            </div>
+
+            <div class="community-section">
+                <div class="section-header">
+                    COMMUNITY
+                    <img class="name-line" src="images/wiki/Middle.png" alt="">
+                    <img class="name-bolt-left" src="images/wiki/Bolt.png" alt="">
+                    <img class="name-decoration" src="images/wiki/Corner_top_left.png" alt="">
+                </div>
+
+                <div class="community-buttons-row">
+                    <a href="https://satisfactory.wiki.gg/wiki/Special:CreateAccount">Register</a>
+                    <a href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki:How_to_help">How to help</a>
+                    <a href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki:Style_guide">Style guide</a>
+                </div>
+
+                <p class="community-note">To write a new article, just enter the article title in the box below or in
+                    the search box at the top of the page.</p>
+
+                <div class="community-create">
+                    <input type="text">
+                    <button>Create page</button>
+                </div>
+
+                <ul class="community-list">
+                    <li><b>Adding content</b>
+                        <ul>
+                            <li>If you are unsure of what to do or how to create a page, search for a few articles on
+                                the same topic and see what they look like. You can always view the source code in a
+                                wiki and learn from what others have done.</li>
+                            <li>An edit doesn't have to be massive; if you feel you don't want to create whole articles,
+                                then just fixing spelling errors and broken links is enough.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p class="community-sections">
+                    Main page sections: <a href="#">Top</a> · <a href="#">Flex</a> · <a href="#">Nav</a> · <a
+                        href="#">Bottom</a>. Changes for the main page can be proposed <a href="#">here</a>.
+                </p>
+
+                <div class="category-line">
+                    Category: <a href="#">Satisfactory Wiki</a>
+                </div>
+            </div>
+            <div class="add">
+                <a href="#"><img src="images/wiki/add.png" alt="add"></a>
+            </div>
+        </div>
+    </main>
+
+    <div class="page-footer">
+        <p>This page was last edited on 8 November 2024, at 01:21.</p>
+        <p>Pages that were created prior to March 2023 are adapted from the Satisfactory Fandom wiki.</p>
+        <p>Page content is under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+                Attribution-Non-Commercial-ShareAlike 4.0 License</a> unless otherwise noted.</p>
+
+        <div class="footer-links-row">
+            <a href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki:Terms_of_Service">Terms of Service</a>
+            <a href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki:Privacy_policy">Privacy policy</a>
+            <a href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki:Support_Wiki">Support Wiki</a>
+            <a href="https://satisfactory.wiki.gg/wiki/Special:Contact">Send a ticket to wiki.gg</a>
+            <a href="https://satisfactory.wiki.gg/wiki/Special:Statistics">Status page</a>
+            <a href="#">Manage cookie settings</a>
+        </div>
+
+        <div class="footer-icons-row">
+            <img src="images/wiki/CC-BY-NC-SA_footer_badge_dark.svg" alt="CC BY NC SA">
+            <img src="images/wiki/MediaWiki_footer_badge_dark.svg" alt="Powered by MediaWiki">
+            <img src="images/wiki/Network_footer_badge_dark.svg" alt="Part of wiki.gg">
+        </div>
+    </div>
+
+    <div class="wiki-gg-fab">
+        <img src="images/wiki/Network_header_logo.svg" alt="wiki.gg">
+    </div>
+</body>
+
+</html>
