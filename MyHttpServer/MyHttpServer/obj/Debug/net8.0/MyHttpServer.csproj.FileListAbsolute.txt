@@ -1,0 +1,16 @@
+D:\проекты VS\MyHttpServer\MyHttpServer\bin\Debug\net8.0\MyHttpServer.exe
+D:\проекты VS\MyHttpServer\MyHttpServer\bin\Debug\net8.0\MyHttpServer.deps.json
+D:\проекты VS\MyHttpServer\MyHttpServer\bin\Debug\net8.0\MyHttpServer.runtimeconfig.json
+D:\проекты VS\MyHttpServer\MyHttpServer\bin\Debug\net8.0\MyHttpServer.dll
+D:\проекты VS\MyHttpServer\MyHttpServer\bin\Debug\net8.0\MyHttpServer.pdb
+D:\проекты VS\MyHttpServer\MyHttpServer\obj\Debug\net8.0\MyHttpServer.GeneratedMSBuildEditorConfig.editorconfig
+D:\проекты VS\MyHttpServer\MyHttpServer\obj\Debug\net8.0\MyHttpServer.AssemblyInfoInputs.cache
+D:\проекты VS\MyHttpServer\MyHttpServer\obj\Debug\net8.0\MyHttpServer.AssemblyInfo.cs
+D:\проекты VS\MyHttpServer\MyHttpServer\obj\Debug\net8.0\MyHttpServer.csproj.CoreCompileInputs.cache
+D:\проекты VS\MyHttpServer\MyHttpServer\obj\Debug\net8.0\MyHttpServer.dll
+D:\проекты VS\MyHttpServer\MyHttpServer\obj\Debug\net8.0\refint\MyHttpServer.dll
+D:\проекты VS\MyHttpServer\MyHttpServer\obj\Debug\net8.0\MyHttpServer.pdb
+D:\проекты VS\MyHttpServer\MyHttpServer\obj\Debug\net8.0\MyHttpServer.genruntimeconfig.cache
+D:\проекты VS\MyHttpServer\MyHttpServer\obj\Debug\net8.0\ref\MyHttpServer.dll
+D:\проекты VS\MyHttpServer\MyHttpServer\bin\Debug\net8.0\settings.json
+D:\проекты VS\MyHttpServer\MyHttpServer\bin\Debug\net8.0\search-engine.html

@@ -1,0 +1,117 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B VS\\MyHttpServer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FDD6BAC4-FB2C-4D33-85DE-B5ADFC6DB0F2}|MyHttpServer\\MyHttpServer.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B vs\\myhttpserver\\myhttpserver\\httpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDD6BAC4-FB2C-4D33-85DE-B5ADFC6DB0F2}|MyHttpServer\\MyHttpServer.csproj|solutionrelative:myhttpserver\\httpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDD6BAC4-FB2C-4D33-85DE-B5ADFC6DB0F2}|MyHttpServer\\MyHttpServer.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B vs\\myhttpserver\\myhttpserver\\settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FDD6BAC4-FB2C-4D33-85DE-B5ADFC6DB0F2}|MyHttpServer\\MyHttpServer.csproj|solutionrelative:myhttpserver\\settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDD6BAC4-FB2C-4D33-85DE-B5ADFC6DB0F2}|MyHttpServer\\MyHttpServer.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B vs\\myhttpserver\\myhttpserver\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDD6BAC4-FB2C-4D33-85DE-B5ADFC6DB0F2}|MyHttpServer\\MyHttpServer.csproj|solutionrelative:myhttpserver\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDD6BAC4-FB2C-4D33-85DE-B5ADFC6DB0F2}|MyHttpServer\\MyHttpServer.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B vs\\myhttpserver\\myhttpserver\\search-engine.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FDD6BAC4-FB2C-4D33-85DE-B5ADFC6DB0F2}|MyHttpServer\\MyHttpServer.csproj|solutionrelative:myhttpserver\\search-engine.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDD6BAC4-FB2C-4D33-85DE-B5ADFC6DB0F2}|MyHttpServer\\MyHttpServer.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B vs\\myhttpserver\\myhttpserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDD6BAC4-FB2C-4D33-85DE-B5ADFC6DB0F2}|MyHttpServer\\MyHttpServer.csproj|solutionrelative:myhttpserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDD6BAC4-FB2C-4D33-85DE-B5ADFC6DB0F2}|MyHttpServer\\MyHttpServer.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B vs\\myhttpserver\\myhttpserver\\myhttpserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FDD6BAC4-FB2C-4D33-85DE-B5ADFC6DB0F2}|MyHttpServer\\MyHttpServer.csproj|solutionrelative:myhttpserver\\myhttpserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HttpServer.cs",
+              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B VS\\MyHttpServer\\MyHttpServer\\HttpServer.cs",
+              "RelativeDocumentMoniker": "MyHttpServer\\HttpServer.cs",
+              "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B VS\\MyHttpServer\\MyHttpServer\\HttpServer.cs",
+              "RelativeToolTip": "MyHttpServer\\HttpServer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-25T17:32:26.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "search-engine.html",
+              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B VS\\MyHttpServer\\MyHttpServer\\search-engine.html",
+              "RelativeDocumentMoniker": "MyHttpServer\\search-engine.html",
+              "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B VS\\MyHttpServer\\MyHttpServer\\search-engine.html",
+              "RelativeToolTip": "MyHttpServer\\search-engine.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-09-25T17:15:00.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MyHttpServer.csproj",
+              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B VS\\MyHttpServer\\MyHttpServer\\MyHttpServer.csproj",
+              "RelativeDocumentMoniker": "MyHttpServer\\MyHttpServer.csproj",
+              "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B VS\\MyHttpServer\\MyHttpServer\\MyHttpServer.csproj",
+              "RelativeToolTip": "MyHttpServer\\MyHttpServer.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-09-25T14:21:13.022Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Settings.cs",
+              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B VS\\MyHttpServer\\MyHttpServer\\Settings.cs",
+              "RelativeDocumentMoniker": "MyHttpServer\\Settings.cs",
+              "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B VS\\MyHttpServer\\MyHttpServer\\Settings.cs",
+              "RelativeToolTip": "MyHttpServer\\Settings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-25T14:40:11.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B VS\\MyHttpServer\\MyHttpServer\\Program.cs",
+              "RelativeDocumentMoniker": "MyHttpServer\\Program.cs",
+              "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B VS\\MyHttpServer\\MyHttpServer\\Program.cs",
+              "RelativeToolTip": "MyHttpServer\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-25T14:14:37.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "settings.json",
+              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B VS\\MyHttpServer\\MyHttpServer\\settings.json",
+              "RelativeDocumentMoniker": "MyHttpServer\\settings.json",
+              "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B VS\\MyHttpServer\\MyHttpServer\\settings.json",
+              "RelativeToolTip": "MyHttpServer\\settings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-25T14:49:42.87Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
