@@ -68,33 +68,9 @@ namespace MyHttpServer.Framework.Core
                     response.StatusCode = 404;
                     filePath = Path.Combine(AppContext.BaseDirectory, "static", "404.html");
                 }
-                FileInfo fileInfo = new FileInfo(filePath);
 
-                switch (fileInfo.Extension)
-                {
-                    case ".html":
-                        response.ContentType = "text/html; charset=utf-8";
-                        break;
-                    case ".css":
-                        response.ContentType = "text/css; charset=utf-8";
-                        break;
-                    case ".js":
-                        response.ContentType = "text/javascript; charset=utf-8";
-                        break;
-                    case ".png":
-                        response.ContentType = "image/png";
-                        break;
-                    case ".ico":
-                        response.ContentType = "image/x-icon";
-                        break;
-                    case ".svg":
-                        response.ContentType = "image/svg+xml";
-                        break;
-                    case ".jpg":
-                        response.ContentType = "image/jpeg";
-                        break;
-                }
-
+                response.ContentType = ContentTypeProvider.GetContentType(filePath);
+                
                 byte[] buffer = await File.ReadAllBytesAsync(filePath);
                 response.ContentLength64 = buffer.Length;
                 using Stream output = response.OutputStream;

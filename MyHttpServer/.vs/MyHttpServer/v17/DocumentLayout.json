@@ -19,7 +19,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MyHttpServer",
+              "Title": "MyHttpServer.csproj",
               "DocumentMoniker": "D:\\University\\RiderProjects\\MyHttpServer\\MyHttpServer\\MyHttpServer.csproj",
               "RelativeDocumentMoniker": "MyHttpServer\\MyHttpServer.csproj",
               "ToolTip": "D:\\University\\RiderProjects\\MyHttpServer\\MyHttpServer\\MyHttpServer.csproj",

@@ -18,4 +18,3 @@ public class Settings
 //    public string Host { get; set; } = "127.0.0.1";
 //    public string Path { get; set; } = "";
 //}
-
