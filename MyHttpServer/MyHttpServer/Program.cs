@@ -1,11 +1,8 @@
 ﻿using System.Net;
 using System.Text;
 using System.Text.Json;
-using MyHttpServer;
-
+using MyHttpServer.Framework.Core;
 
 HttpServer httpServer = new HttpServer();
-await httpServer.Start();
-
-
-
+httpServer.Start();
+Console.ReadLine();
