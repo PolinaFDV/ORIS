@@ -1,0 +1,306 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+    max-width: 100%;
+    font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica, sans-serif;
+}
+a {
+    color: aliceblue;
+}
+.list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.button {
+    padding: 5px 10px;
+    color: #fff;
+}
+.blue--text {
+    color: #1999ff;
+}
+.header--logo {
+    width: 170px;
+    opacity: 0.7;
+    margin-right: 40px;
+}
+header {
+    padding: 0px 140px 0px 80px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #171d25;
+}
+.header--right {
+    padding: 10px 0;
+    text-align: start;
+    gap: 16px;
+    font-size: 12px;
+}
+.header--right a {
+    text-decoration: none;
+    color: #b8b6b4;
+}
+#load--button {
+    background-color: #5c7e10;
+    color: #e5e4dc;
+    position: relative;
+    padding-left: 30px;
+}
+#load--button::before{
+    content: "";
+    background-image: url("../images/steam/btn_header_installsteam_download.png");
+    width: 15px;
+    height: 13px;
+    top: 5px;
+    left: 8px;
+    position: absolute;
+}
+#load--button::after{
+    content: "";
+    background-color: #b8b6b4;
+    width: 1px;
+    height: 10px;
+    top: 8px;
+    left: 191px;
+    position: absolute;
+}
+#language {
+    position: relative;
+}
+#language::before{
+    content: "";
+    background-image: url("../images/steam/btn_arrow_down_padded.png");
+    width: 15px;
+    height: 10px;
+    top: 0px;
+    left: 25px;
+    position: absolute;
+}
+
+.header--left {
+    padding: 30px 0;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.header--left a{
+    text-decoration: none;
+    color: rgb(211, 211, 211);
+}
+#shop {
+    color: #1999ff;
+    position: relative;
+}
+#shop::after {
+    content: "";
+    background-color: #1999ff;
+    position: absolute;
+    width: 74px;
+    height: 2.3px;
+    top: 18px;
+    left: 0;
+
+}
+section {
+    background-color: #182535;
+    padding: 5px 105px ;
+    font-size: 15px;
+    font-size: 14px;
+}
+section ul {
+    justify-content: space-between;
+    align-items: center;
+}
+section p {
+    position: relative;
+}
+section p::after{
+    background-image: url("../images/steam/strela.png");
+    content: "";
+    width: 13px;
+    height: 11px;
+    position: absolute;
+    background-size: 15px;
+    top: 2px;
+    margin-left: 4px;
+}
+#search {
+    width: 480px;
+    height: 30px;
+    background-color: rgb(94, 95, 114);
+    opacity: 0.7;
+    border-color:aliceblue;
+    border-width: 1.2px;
+    padding-left: 10px;
+}
+#input--search {
+    position: relative;
+}
+#input--search::after {
+    background-image: url("../images/steam/lypa.png");
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-size: 32px;
+    position: absolute;
+    top: 0px;
+    left: 450px;
+    background-color: red;
+}
+main {
+    background-image:url("../images/steam/new_login_bg_strong_mask.jpg");
+    padding: 100px 300px 80px;
+}
+#entrance {
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: 900;
+    font-size: 26px;
+}
+.authorization {
+    margin: 50px 0 70px 0;
+    padding: 35px 35px 20px 35px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    background-color: #171d25;
+    gap: 30px;
+}
+main {
+    font-size: 12px;
+}
+main input {
+    padding: 10px;
+    margin: 5px 10px 20px 0;
+    color: #171d25;
+    width: 95%;
+}
+.input--authorization div {
+    text-align: center;
+    margin: 10px 0;
+}
+#button--enter {
+    background-color: #1999ff;
+    text-decoration: none;
+    padding: 15px 90px;
+    justify-content: center;
+    margin: 10px 110px 50px;
+    font-size: 17px;
+    border-radius: 2px;
+}
+#remember--me {
+    position: relative;
+    padding-left: 23px;
+    padding-bottom: 5px;
+}
+#remember--me::after {
+    position: absolute;
+    content: "";
+    background-color:#8b929a;
+    width: 17px;
+    height: 17px;
+    top: -2px;
+    left: 2px;
+    border-radius: 2px;
+}
+.qr--authorization {
+    margin-right: 30px;
+}
+.qr--authorization p:not(.blue--text) {
+    text-align: center;
+}
+.authorization p:not(.blue--text, #button--enter), a {
+    color: rgb(211, 211, 211);
+}
+#qr-img {
+    width: 200px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.under--main {
+    background-color: #171d25;
+    padding: 70px 30px 20px;
+    display: grid;
+    grid-template-columns: 300px 350px;
+    gap: 10px;
+    justify-content: center;
+}
+.under--main--left {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.under--main--left h3 {
+    font-weight: 800;
+}
+
+.under--main--right {
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    font-size: 15px;
+}
+.under--main--right a, .under--main--right p {
+    color:#b8b6b4;
+}
+#button--create--account {
+    background-color: #1999ff;
+    text-decoration: none;
+    justify-content: center;
+    font-size: 17px;
+    border-radius: 2px;
+    margin: 15px 60px;
+}
+footer {
+    background-color: #171d25;
+    display: grid;
+    grid-template-columns: 2.1fr 1.2fr 0.5fr 1fr 1.3fr;
+    padding: 30px 20px 50px 30px;
+    gap: 30px;
+}
+#column1 {
+    margin-right: 100px;
+}
+#column1 p {
+    font-size: 12px;
+    color:#b8b6b4;
+    margin-bottom: 20px;
+}
+.logos img {
+    width: 130px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+}
+.column {
+    list-style: none;
+    margin-top: 15px;
+}
+.column li {
+    margin-bottom: 10px;
+}
+.column a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #8b929a;
+}
+.name {
+    font-size: 14px;
+    font-weight: 600;
+    color:#b8b6b4;
+}
+.apps {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    align-items: center;
+}
+.apps img {
+    width: 30px;
+}

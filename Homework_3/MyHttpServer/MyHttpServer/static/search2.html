@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: "Afacad", sans-serif;
+            font-weight: 700;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        a {
+            width: 65;
+            height: 65;
+        }
+        img {
+            max-width: 100%;
+        }
+        header {
+            display: flex;
+            text-align: right;
+            flex-direction: column;
+            margin: 35px 35px 0 35px;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+            justify-content: center;
+        }
+        div.input {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 55.5px 0 55.5px 0;
+            position: relative;
+        }
+        div.input img {
+            position: absolute;
+            left: 27.83px;
+            width: 28;
+            top: 18.55px;
+        }
+        input {
+            background-color: #FAFAFA;
+            border: 1.16px solid #EEEEEE;
+            width: calc(622px - 27.82px*2);
+            height: calc(65px - 18.55px - 18.55px);
+            border-radius: 18.55px;
+            padding: 18.55px 27.83px;
+            padding-left: 65.1px;
+            gap: 9.28px;
+            font-size: 20px;
+            color: #9E9E9E;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        div ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+        div ul li:hover {
+            opacity: 60%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p style="font-size: 32px;">36°</p>
+        <p style="color: #6E6CDF; font-size: 20px;"><b>Ahmedabad</b></p>
+    </header>
+    <main>
+        <div>
+            <h1 style="font-size: 74px;">09:11:01</h1>
+            <h3 style="color: #6E6CDF; font-size: 36px;">Good Morning, Saad.</h3>
+        </div>
+        <div>
+            <div class="input">
+                <img src="images/search/loupe.svg" alt="loupe">
+                <input placeholder="Search" name="Search" id="search">
+            </div>
+            <div class="apps">
+                <ul>
+                    <li>
+                        <a href="https://www.youtube.com/"><img src="images/search/youtube.svg" alt="YouTube"></a>
+                    </li>
+                    <li>
+                        <a href="https://chatgpt.com/"><img src="images/search/ChatGPT.svg" alt="ChatGPT"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.geeksforgeeks.org/"><img src="images/search/GFG.svg" alt="GFG"></a>
+                    </li>
+                    <li>
+                        <a href="https://deepseek.com/"><img src="images/search/DeepSeek.svg" alt="DeepSeek"></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/"><img src="images/search/GitHub.svg" alt="GitHub"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/"><img src="images/search/LinkedIn.svg" alt="LinkedIn"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.yandex.com/"><img src="images/search/Plus.svg" alt="NewSource"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+
