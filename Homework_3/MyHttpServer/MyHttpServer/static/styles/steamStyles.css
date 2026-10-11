@@ -1,4 +1,4 @@
-﻿* {
+* {
     margin: 0;
     padding: 0;
     color: aliceblue;
@@ -150,7 +150,6 @@ section p::after{
     position: absolute;
     top: 0px;
     left: 450px;
-    background-color: red;
 }
 main {
     background-image:url("../images/steam/new_login_bg_strong_mask.jpg");
