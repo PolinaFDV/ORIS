@@ -16,20 +16,16 @@ public class HomeworkController : ControllerBase
     [Get("send")]
     public string Send([FromQuery] string to)
     {
-        // Проверяем адрес получателя
         if (!MailAddress.TryCreate(to, out _))
             throw new ArgumentException("Некорректный адрес почты.");
 
-        // Данные отправителя и студента
         string senderEmail = "f3dyaeva.p@yandex.ru";
         string appPassword = "rczhdkvnceubjdhd";
         string group = "11-541";
         string fullName = "Федяева Полина Константиновна";
 
-        // Находим папку проекта
         string projectDirectory = FindProjectDirectory();
 
-        // Создаём временный ZIP-архив
         string zipPath = Path.Combine(
             Path.GetTempPath(),
             "MyHttpServer.zip"
@@ -50,7 +46,6 @@ public class HomeworkController : ControllerBase
                     string relativePath = Path.GetRelativePath(
                         projectDirectory, file);
 
-                    // Не добавляем служебные папки
                     if (relativePath.Split(Path.DirectorySeparatorChar)
                         .Any(part => part == "bin" ||
                                      part == "obj" ||
@@ -64,7 +59,6 @@ public class HomeworkController : ControllerBase
                 }
             }
 
-            // Создаём письмо
             MailAddress from = new MailAddress(senderEmail, fullName);
             MailAddress toAddress = new MailAddress(to);
 
@@ -72,13 +66,11 @@ public class HomeworkController : ControllerBase
             {
                 message.Subject = "Домашнее задание 5";
                 message.Body =
-                    $"Номер группы: {group}\n" +
-                    $"ФИО: {fullName}\n\n";
+                    $"{fullName}\n" +
+                    $"Номер группы: {group}\n\n";
 
-                // Прикрепляем архив
                 message.Attachments.Add(new Attachment(zipPath));
 
-                // Настраиваем SMTP Яндекса
                 using (SmtpClient smtp = new SmtpClient("smtp.yandex.ru", 587))
                 {
                     smtp.Credentials = new NetworkCredential(
@@ -93,7 +85,6 @@ public class HomeworkController : ControllerBase
         }
         finally
         {
-            // Удаляем временный архив после отправки
             if (File.Exists(zipPath))
                 File.Delete(zipPath);
         }

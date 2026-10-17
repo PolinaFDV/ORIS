@@ -35,7 +35,6 @@ public class StaticFileHandler : Handler
         string folderPrefix = staticFolder.TrimEnd(
             Path.DirectorySeparatorChar) + Path.DirectorySeparatorChar;
 
-        // Не разрешаем обращаться к файлам за пределами static.
         if (!requestedFile.StartsWith(
                 folderPrefix, StringComparison.OrdinalIgnoreCase)
             && !requestedFile.Equals(
@@ -83,7 +82,6 @@ public class StaticFileHandler : Handler
             return;
         }
 
-        // Тип содержимого определяет уже существующий класс.
         context.Response.ContentType =
             ContentTypeProvider.GetContentType(requestedFile);
 

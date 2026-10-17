@@ -16,7 +16,6 @@ public class HttpServer
 
     public HttpServer()
     {
-        // Если контроллер не нашёл маршрут, пробуем отдать файл.
         _controllerHandler.SetNext(_staticFileHandler);
     }
 
@@ -92,7 +91,6 @@ public class HttpServer
             }
             catch
             {
-                // Ответ мог быть уже закрыт.
             }
         }
     }

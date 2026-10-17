@@ -21,14 +21,12 @@ internal sealed class ControllerHandler : Handler
         string[] segments = (request.Url?.AbsolutePath ?? "")
             .Split('/', StringSplitOptions.RemoveEmptyEntries);
 
-        // Пока поддерживаем маршруты вида /auth/login.
         if (segments.Length != 2)
         {
             await NextAsync(context);
             return;
         }
 
-        // Рефлексия ищет класс, у которого есть HttpControllerAttribute.
         Type? controllerType = Assembly.GetExecutingAssembly()
             .GetTypes()
             .FirstOrDefault(type =>
@@ -48,7 +46,6 @@ internal sealed class ControllerHandler : Handler
             return;
         }
 
-        // Ищем метод с подходящим HTTP-методом и маршрутом.
         MethodInfo? action = controllerType
             .GetMethods(BindingFlags.Public | BindingFlags.Instance)
             .FirstOrDefault(method =>
@@ -75,15 +72,11 @@ internal sealed class ControllerHandler : Handler
 
             controller.SetContext(context);
 
-            // Invoke вызывает найденный метод контроллера.
             object? result = action.Invoke(controller, arguments);
 
             if (result is Task task)
             {
                 await task;
-
-                // Для данного учебного проекта методы контроллеров,
-                // возвращающие Task, не должны одновременно возвращать ответ.
                 return;
             }
 
