@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace MyHttpServer.Framework.Http;
 
-internal static class HttpResponseWriter
+public static class HttpResponseWriter
 {
     public static Task WriteHtmlAsync(
         HttpListenerResponse response,

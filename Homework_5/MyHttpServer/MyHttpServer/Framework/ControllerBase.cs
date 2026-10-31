@@ -7,7 +7,7 @@ public class ControllerBase
 {
     protected HttpListenerContext Context { get; private set; } = null!;
 
-    internal void SetContext(HttpListenerContext context)
+    public void SetContext(HttpListenerContext context)
     {
         Context = context;
     }

@@ -3,7 +3,7 @@ using System.Text;
 
 namespace MyHttpServer.Framework.HttpResponses;
 
-internal class HtmlResult : IHttpResponseTypeResult
+public class HtmlResult : IHttpResponseTypeResult
 {
     private readonly string _html;
 

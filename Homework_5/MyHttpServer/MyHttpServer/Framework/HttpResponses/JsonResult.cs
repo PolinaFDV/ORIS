@@ -4,7 +4,7 @@ using System.Text.Json;
 
 namespace MyHttpServer.Framework.HttpResponses;
 
-internal class JsonResult : IHttpResponseTypeResult
+public class JsonResult : IHttpResponseTypeResult
 {
     private readonly object _data;
 
