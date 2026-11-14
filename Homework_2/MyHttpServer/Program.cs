@@ -1,0 +1,10 @@
+﻿using System.Net;
+using System.Text;
+using System.Text.Json;
+using MyHttpServer.Framework.Core;
+using System;
+
+HttpServer httpServer = new HttpServer();
+httpServer.Start();
+Console.ReadLine();
+httpServer.Stop();

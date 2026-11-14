@@ -1,0 +1,32 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0b8c567d_002D8902_002D4a16_002D93f7_002Dfeb4c887b772/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="HtmlTemplateRendererTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;MSTest::B4B5FA78-C810-4189-AA27-567F21F445F8::net10.0::MiniTemplateEngine.UnitTests.HtmlTemplateRendererTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=58c56b00_002Df81e_002D48fd_002Da74f_002Dc8e84271fcf4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Continuous Testing" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Solution /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f48501e0_002Dc17b_002D4730_002Da615_002D4af4d6572e7c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="RendererFromString_Possitive_ReturnValid" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;MSTest::B4B5FA78-C810-4189-AA27-567F21F445F8::net10.0::MiniTemplateEngine.UnitTests.HtmlTemplateRendererTests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::DC714355-CA8C-4CC0-83ED-F79F06E56572::net10.0::MyHttpServer.UnitTests.ContentTypeProviderTests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::DC714355-CA8C-4CC0-83ED-F79F06E56572::net10.0::MyHttpServer.UnitTests.AttributesTests.HttpControllerAttribute_Constructor_SavesRoute&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::DC714355-CA8C-4CC0-83ED-F79F06E56572::net10.0::MyHttpServer.UnitTests.AttributesTests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::DC714355-CA8C-4CC0-83ED-F79F06E56572::net10.0::MyHttpServer.UnitTests.ControllerHandlerTests.ConvertValue_MissingOptionalValue_ReturnsDefaultValue&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::DC714355-CA8C-4CC0-83ED-F79F06E56572::net10.0::MyHttpServer.UnitTests.ControllerHandlerTests.ConvertValue_MissingRequiredValue_ThrowsException&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::DC714355-CA8C-4CC0-83ED-F79F06E56572::net10.0::MyHttpServer.UnitTests.ControllerHandlerTests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::DC714355-CA8C-4CC0-83ED-F79F06E56572::net10.0::MyHttpServer.UnitTests.HttpResponseWriterTests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::DC714355-CA8C-4CC0-83ED-F79F06E56572::net10.0::MyHttpServer.UnitTests.ControllerBaseTests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::DC714355-CA8C-4CC0-83ED-F79F06E56572::net10.0::MyHttpServer.UnitTests.HandlerTests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::DC714355-CA8C-4CC0-83ED-F79F06E56572::net10.0::MyHttpServer.UnitTests.StaticFileHandlerTests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::DC714355-CA8C-4CC0-83ED-F79F06E56572::net10.0::MyHttpServer.UnitTests.HttpServerTests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::DC714355-CA8C-4CC0-83ED-F79F06E56572::net10.0::MyHttpServer.UnitTests.LoginHandlerTests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::DC714355-CA8C-4CC0-83ED-F79F06E56572::net10.0::MyHttpServer.UnitTests.AuthControllerTests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::DC714355-CA8C-4CC0-83ED-F79F06E56572::net10.0::MyHttpServer.UnitTests.SteamControllerTests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::DC714355-CA8C-4CC0-83ED-F79F06E56572::net10.0::MyHttpServer.UnitTests.HomeworkControllerTests&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+    &lt;ProjectFile&gt;DC714355-CA8C-4CC0-83ED-F79F06E56572/f:HttpResponseResultsTests.cs&lt;/ProjectFile&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

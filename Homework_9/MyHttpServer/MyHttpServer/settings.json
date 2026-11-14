@@ -1,0 +1,4 @@
+﻿{
+  "Prefixes": [ "http://127.0.0.1:8888/connection/" ],
+  "ConnectionString": "Host=localhost;Database=OrisDb;Username=postgres;Password=22443535pP!"
+}
