@@ -111,6 +111,6 @@ public sealed class OrmContext : IOrmContext
     {
         if (string.IsNullOrWhiteSpace(identifier) || !Regex.IsMatch(identifier, @"^[A-Za-z_][A-Za-z0-9_]*$"))
             throw new ArgumentException("Недопустимое имя SQL-идентификатора.", nameof(identifier));
-        return $"\"{identifier}\""; // В PostgreSQL используются двойные кавычки
+        return $"\"{identifier}\"";
     }
 }

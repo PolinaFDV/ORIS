@@ -1,9 +1,15 @@
-﻿﻿* {
+﻿* {
     margin: 0;
     padding: 0;
     color: aliceblue;
     max-width: 100%;
     font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+html, body {
+    background-color: #171d25;
+    margin: 0;
+    padding: 0;
 }
 a {
     color: aliceblue;
@@ -31,6 +37,7 @@ header {
     display: flex;
     justify-content: space-between;
     background-color: #171d25;
+    align-items: center;
 }
 .header--right {
     padding: 10px 0;
@@ -104,12 +111,10 @@ header {
     height: 2.3px;
     top: 18px;
     left: 0;
-
 }
 section {
     background-color: #182535;
-    padding: 5px 105px ;
-    font-size: 15px;
+    padding: 5px 105px;
     font-size: 14px;
 }
 section ul {
@@ -130,16 +135,18 @@ section p::after{
     margin-left: 4px;
 }
 #search {
-    width: 480px;
+    width: 100%; 
+    max-width: 480px;
     height: 30px;
     background-color: rgb(94, 95, 114);
     opacity: 0.7;
-    border-color:aliceblue;
+    border-color: aliceblue;
     border-width: 1.2px;
     padding-left: 10px;
 }
 #input--search {
     position: relative;
+    width: 480px;
 }
 #input--search::after {
     background-image: url("../images/steam/lypa.png");
@@ -149,12 +156,14 @@ section p::after{
     background-size: 32px;
     position: absolute;
     top: 0px;
-    left: 450px;
-    background-color: red;
+    right: 0px; 
+    background-color: transparent; 
 }
 main {
-    background-image:url("../images/steam/new_login_bg_strong_mask.jpg");
+    background-image: url("../images/steam/new_login_bg_strong_mask.jpg");
     padding: 100px 300px 80px;
+    background-size: cover;
+    background-position: center;
 }
 #entrance {
     font-family: "Motiva Sans", Sans-serif;
@@ -165,7 +174,7 @@ main {
     margin: 50px 0 70px 0;
     padding: 35px 35px 20px 35px;
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 1fr; 
     background-color: #171d25;
     gap: 30px;
 }
@@ -174,9 +183,9 @@ main {
 }
 main input {
     padding: 10px;
-    margin: 5px 10px 20px 0;
+    margin: 5px 0 20px 0; 
     color: #171d25;
-    width: 95%;
+    width: 100%; 
 }
 .input--authorization div {
     text-align: center;
@@ -185,11 +194,14 @@ main input {
 #button--enter {
     background-color: #1999ff;
     text-decoration: none;
-    padding: 15px 90px;
-    justify-content: center;
-    margin: 10px 110px 50px;
+    padding: 15px 0; 
+    width: 100%; 
     font-size: 17px;
     border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    margin-bottom: 20px;
 }
 #remember--me {
     position: relative;
@@ -199,7 +211,7 @@ main input {
 #remember--me::after {
     position: absolute;
     content: "";
-    background-color:#8b929a;
+    background-color: #8b929a;
     width: 17px;
     height: 17px;
     top: -2px;
@@ -207,20 +219,23 @@ main input {
     border-radius: 2px;
 }
 .qr--authorization {
-    margin-right: 30px;
+    margin-right: 0; 
 }
 .qr--authorization p:not(.blue--text) {
     text-align: center;
 }
-.authorization p:not(.blue--text, #button--enter), a {
+.authorization p:not(.blue--text, #button--enter),
+a {
     color: rgb(211, 211, 211);
 }
 #qr-img {
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     padding: 15px;
     background-color: #fff;
     border-radius: 10px;
-    margin-right: 10px;
+    margin-right: 0;
+    margin-bottom: 15px;
 }
 .under--main {
     background-color: #171d25;
@@ -233,22 +248,21 @@ main input {
 .under--main--left {
     display: flex;
     flex-direction: column;
-    display: flex;
     justify-content: center;
     text-align: center;
 }
 .under--main--left h3 {
     font-weight: 800;
 }
-
 .under--main--right {
     display: flex;
     justify-content: flex-start;
     text-align: center;
     font-size: 15px;
 }
-.under--main--right a, .under--main--right p {
-    color:#b8b6b4;
+.under--main--right a,
+.under--main--right p {
+    color: #b8b6b4;
 }
 #button--create--account {
     background-color: #1999ff;
@@ -270,7 +284,7 @@ footer {
 }
 #column1 p {
     font-size: 12px;
-    color:#b8b6b4;
+    color: #b8b6b4;
     margin-bottom: 20px;
 }
 .logos img {
@@ -293,7 +307,7 @@ footer {
 .name {
     font-size: 14px;
     font-weight: 600;
-    color:#b8b6b4;
+    color: #b8b6b4;
 }
 .apps {
     display: flex;

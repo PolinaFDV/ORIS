@@ -128,18 +128,19 @@ public class HtmlTemplateRenderer : IHtmlTemplateRenderer // Создаём кл
                             continue; // Пропускаем пустой элемент.
                         }
 
-                        string currentBlock = Regex.Replace( // Заменяем выражения вида ${user.Name}.
-                            block, // Обрабатываем содержимое цикла.
-                            @"\$\{" + Regex.Escape(itemName) + // Ищем начало выражения с именем переменной цикла.
-                            @"\.([A-Za-z_]\w*)\}", // Находим имя свойства после точки.
-                            m => GetValue(m.Groups[1].Value, item)?.ToString() ?? ""); // Получаем значение свойства текущего элемента.
+                        // Заменяем ${user.Name} на значение свойства Name
+                        string currentBlock = Regex.Replace( 
+                            block, 
+                            @"\$\{" + Regex.Escape(itemName) + 
+                            @"\.([A-Za-z_]\w*)\}", 
+                            m => GetValue(m.Groups[1].Value, item)?.ToString() ?? ""); 
 
-                        currentBlock = Regex.Replace( // Заменяем выражения вида user.Name без ${}.
-                            currentBlock, // Используем уже обработанный текст блока.
-                            @"\b" + Regex.Escape(itemName) + // Ищем имя переменной цикла как отдельное слово.
-                            @"\.([A-Za-z_]\w*)\b", // Находим имя свойства.
-                            m => GetValue(m.Groups[1].Value, item)?.ToString() ?? ""); // Подставляем значение свойства.
-
+                        currentBlock = Regex.Replace( 
+                            currentBlock, 
+                            @"\b" + Regex.Escape(itemName) + 
+                            @"\.([A-Za-z_]\w*)\b", 
+                            m => GetValue(m.Groups[1].Value, item)?.ToString() ?? ""); 
+                        
                         result += ProcessTemplate(currentBlock, item); // Обрабатываем вложенные конструкции для текущего элемента и добавляем результат.
                     } // Завершаем перебор элементов коллекции.
                 } // Завершаем проверку коллекции.
@@ -214,34 +215,44 @@ public class HtmlTemplateRenderer : IHtmlTemplateRenderer // Создаём кл
     /// <param name="expression">Имя свойства или путь через точки.</param>
     /// <param name="dataModel">Объект, в котором ищется свойство.</param>
     /// <returns>Значение свойства или null, если оно не найдено.</returns>
-    private object? GetValue(string expression, object dataModel) // Получаем значение через рефлексию.
+    private object? GetValue(string expression, object dataModel) 
     {
-        string[] parts = expression.Split('.'); // Разделяем путь к свойству по точкам.
-        object? current = dataModel; // Начинаем с исходного объекта.
-
-        foreach (string part in parts) // Перебираем части пути к свойству.
+        if (expression.Contains('.'))
         {
-            if (current == null) // Проверяем, не оказался ли текущий объект пустым.
+            expression = expression.Substring(expression.LastIndexOf('.') + 1);
+        }
+        
+        Console.WriteLine($"[DEBUG TEMPLATE] Ищем: {expression} в объекте типа {dataModel?.GetType().Name}");
+    
+        string[] parts = expression.Split('.'); 
+        object? current = dataModel; 
+
+        foreach (string part in parts) 
+        {
+            if (current == null) 
             {
-                return null; // Если пустой, дальше искать нельзя.
-            } // Завершаем проверку на null.
+                Console.WriteLine($"[DEBUG TEMPLATE] current == null на шаге {part}");
+                return null; 
+            } 
 
-            PropertyInfo? property = current.GetType().GetProperty( // Ищем свойство текущего объекта.
-                part, // Используем имя свойства.
-                BindingFlags.Public | // Ищем публичные свойства.
-                BindingFlags.Instance | // Ищем свойства экземпляра объекта.
-                BindingFlags.IgnoreCase); // Не учитываем регистр букв в имени.
+            PropertyInfo? property = current.GetType().GetProperty( 
+                part, 
+                BindingFlags.Public | 
+                BindingFlags.Instance | 
+                BindingFlags.IgnoreCase); 
 
-            if (property == null) // Проверяем, найдено ли свойство.
+            if (property == null) 
             {
-                return null; // Если не найдено, возвращаем null.
-            } // Завершаем проверку свойства.
+                Console.WriteLine($"[DEBUG TEMPLATE] Свойство {part} НЕ НАЙДЕНО в {current.GetType().Name}");
+                return null; 
+            } 
 
-            current = property.GetValue(current); // Получаем значение свойства и переходим к нему.
-        } // Завершаем перебор частей пути.
+            current = property.GetValue(current); 
+            Console.WriteLine($"[DEBUG TEMPLATE] Нашли {part} = {current}");
+        } 
 
-        return current; // Возвращаем найденное значение.
-    } // Закрываем метод GetValue.
+        return current; 
+    }
 
     /// <summary>
     /// Проверяет простое условие сравнения через ==.
