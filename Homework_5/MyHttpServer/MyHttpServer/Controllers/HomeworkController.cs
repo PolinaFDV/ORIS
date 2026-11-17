@@ -1,6 +1,4 @@
-﻿
-
-using MyHttpServer.Framework;
+﻿using MyHttpServer.Framework;
 using MyHttpServer.Framework.Core;
 using System;
 using System.IO;
@@ -20,7 +18,7 @@ public class HomeworkController : ControllerBase
             throw new ArgumentException("Некорректный адрес почты.");
 
         string senderEmail = "f3dyaeva.p@yandex.ru";
-        string appPassword = "rczhdkvnceubjdhd";
+        string appPassword = "";
         string group = "11-541";
         string fullName = "Федяева Полина Константиновна";
 

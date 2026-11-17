@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyHttpServer", "MyHttpServer\MyHttpServer.csproj", "{36BB3BAF-C128-47BF-B2B5-9121CA0E58E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniHttpServer.HtmlTemplating", "MiniHttpServer.HtmlTemplating\MiniHttpServer.HtmlTemplating.csproj", "{12454FE5-0A96-495E-AFB6-36430CDD1F09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniHttpServer.Framework", "MiniHttpServer.Framework\MiniHttpServer.Framework.csproj", "{0454917F-AD3A-4942-A3A2-2D6DF1144336}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36BB3BAF-C128-47BF-B2B5-9121CA0E58E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36BB3BAF-C128-47BF-B2B5-9121CA0E58E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36BB3BAF-C128-47BF-B2B5-9121CA0E58E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36BB3BAF-C128-47BF-B2B5-9121CA0E58E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12454FE5-0A96-495E-AFB6-36430CDD1F09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12454FE5-0A96-495E-AFB6-36430CDD1F09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12454FE5-0A96-495E-AFB6-36430CDD1F09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12454FE5-0A96-495E-AFB6-36430CDD1F09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0454917F-AD3A-4942-A3A2-2D6DF1144336}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0454917F-AD3A-4942-A3A2-2D6DF1144336}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0454917F-AD3A-4942-A3A2-2D6DF1144336}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0454917F-AD3A-4942-A3A2-2D6DF1144336}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

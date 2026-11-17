@@ -7,14 +7,13 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
-	<ItemGroup>
-		<Content Include="static\**\*">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</Content>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Framework\Configuration\" />
-	</ItemGroup>
+    <ItemGroup>
+        <None Update="settings.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="static\**">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
 
 </Project>

@@ -5,11 +5,13 @@
     <title>Пользователи</title>
 </head>
 <body>
-<h1>Список пользователей</h1>
+<h1>Список пользователей из базы данных</h1>
 <ul>
-    $foreach(var user in Users) {
-    <li>${user.Name} - ${user.Email}, возраст: ${user.Age}</li>
-    }
+    $foreach(var user in Users)
+    <li>
+        <strong>${user.Name}</strong> — ${user.Email}, возраст: ${user.Age}
+    </li>
+    $endfor
 </ul>
 </body>
 </html>

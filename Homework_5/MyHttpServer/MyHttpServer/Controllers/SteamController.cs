@@ -29,7 +29,7 @@ public class SteamController : ControllerBase
             // адрес smtp-сервера и порт, с которого будем отправлять письмо
             SmtpClient smtp = new SmtpClient("smtp.yandex.ru", 587);
             // логин и пароль
-            smtp.Credentials = new NetworkCredential("f3dyaeva.p@yandex.ru", "rczhdkvnceubjdhd");
+            smtp.Credentials = new NetworkCredential("f3dyaeva.p@yandex.ru", "");
             smtp.EnableSsl = true;
             smtp.Send(message);
             Console.WriteLine($"Письмо отправлено на {to}");

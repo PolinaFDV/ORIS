@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace MyHttpServer;
 
-namespace MyHttpServer;
 public class Settings
 {
-    //public Server Server { get; set; } = new();
     public string[] Prefixes { get; set; } = [];
-
+    public EmailSettings Email { get; set; } = new();
 }
 
-//public class Server
-//{
-//    public string Port { get; set; } = "8888";
-//    public string Host { get; set; } = "127.0.0.1";
-//    public string Path { get; set; } = "";
-//}
+public class EmailSettings
+{
+    public string Host { get; set; } = "smtp.yandex.ru";
+    public int Port { get; set; } = 587;
+    public string SenderEmail { get; set; } = "";
+    public string SenderName { get; set; } = "";
+    public string Password { get; set; } = "";
+}

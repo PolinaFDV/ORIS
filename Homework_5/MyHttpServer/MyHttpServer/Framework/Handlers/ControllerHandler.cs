@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -77,7 +76,11 @@ internal sealed class ControllerHandler : Handler
             if (result is Task task)
             {
                 await task;
-                return;
+
+                PropertyInfo? resultProperty = task.GetType()
+                    .GetProperty("Result");
+
+                result = resultProperty?.GetValue(task);
             }
 
             if (result is IHttpResponseTypeResult responseResult)
@@ -89,6 +92,18 @@ internal sealed class ControllerHandler : Handler
             {
                 string html = result as string ?? "<p>Метод выполнен.</p>";
                 await HttpResponseWriter.WriteHtmlAsync(context.Response, html);
+            }
+        }
+        catch (ArgumentException ex)
+        {
+            Console.WriteLine($"Ошибка параметров: {ex.Message}");
+
+            if (context.Response.OutputStream.CanWrite)
+            {
+                await HttpResponseWriter.WriteHtmlAsync(
+                    context.Response,
+                    "<h1>400 - Некорректные параметры запроса</h1>",
+                    400);
             }
         }
         catch (Exception ex)
@@ -169,9 +184,20 @@ internal sealed class ControllerHandler : Handler
             }
             else
             {
-                arguments[i] = parameter.HasDefaultValue
-                    ? parameter.DefaultValue
-                    : ConvertValue(null, parameter);
+                if (query.TryGetValue(name, out string? qValue))
+                {
+                    arguments[i] = ConvertValue(qValue, parameter);
+                }
+                else if (form.TryGetValue(name, out string? fValue))
+                {
+                    arguments[i] = ConvertValue(fValue, parameter);
+                }
+                else
+                {
+                    arguments[i] = parameter.HasDefaultValue
+                        ? parameter.DefaultValue
+                        : ConvertValue(null, parameter);
+                }
             }
         }
 
@@ -201,7 +227,15 @@ internal sealed class ControllerHandler : Handler
             Nullable.GetUnderlyingType(parameter.ParameterType)
             ?? parameter.ParameterType;
 
-        return Convert.ChangeType(value, targetType);
+        try
+        {
+            return Convert.ChangeType(value, targetType);
+        }
+        catch
+        {
+            throw new ArgumentException(
+                $"Некорректное значение параметра: {parameter.Name}");
+        }
     }
 
     private static Dictionary<string, string> ParseUrlEncoded(string data)

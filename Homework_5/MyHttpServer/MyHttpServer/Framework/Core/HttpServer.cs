@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Net;
 using System.Threading.Tasks;
 using MyHttpServer.Framework.Handlers;
@@ -11,12 +10,14 @@ public class HttpServer
     private readonly int _port = 8888;
     private HttpListener? _listener;
 
-    private readonly ControllerHandler _controllerHandler = new ControllerHandler();
     private readonly StaticFileHandler _staticFileHandler = new StaticFileHandler();
+    private readonly ControllerHandler _controllerHandler = new ControllerHandler();
+    private readonly NotFoundHandler _notFoundHandler = new NotFoundHandler();
 
     public HttpServer()
     {
-        _controllerHandler.SetNext(_staticFileHandler);
+        _staticFileHandler.SetNext(_controllerHandler);
+        _controllerHandler.SetNext(_notFoundHandler);
     }
 
     public void Start()
@@ -78,7 +79,7 @@ public class HttpServer
 
         try
         {
-            await _controllerHandler.HandleRequestAsync(context);
+            await _staticFileHandler.HandleRequestAsync(context);
         }
         catch (Exception ex)
         {

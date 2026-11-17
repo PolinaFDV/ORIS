@@ -46,38 +46,7 @@ public class StaticFileHandler : Handler
 
         if (!File.Exists(requestedFile))
         {
-            string notFoundPath = Path.Combine(staticFolder, "404.html");
-
-            context.Response.StatusCode = 404;
-
-            if (File.Exists(notFoundPath))
-            {
-                context.Response.ContentType =
-                    ContentTypeProvider.GetContentType(notFoundPath);
-
-                byte[] notFoundBytes =
-                    await File.ReadAllBytesAsync(notFoundPath);
-
-                context.Response.ContentLength64 = notFoundBytes.Length;
-
-                await context.Response.OutputStream.WriteAsync(
-                    notFoundBytes, 0, notFoundBytes.Length);
-            }
-            else
-            {
-                context.Response.ContentType = "text/plain; charset=utf-8";
-
-                byte[] errorBytes = Encoding.UTF8.GetBytes(
-                    "404 — Файл не найден");
-
-                context.Response.ContentLength64 = errorBytes.Length;
-
-                await context.Response.OutputStream.WriteAsync(
-                    errorBytes, 0, errorBytes.Length);
-            }
-
-            Console.WriteLine($"Файл не найден: {path}");
-            context.Response.Close();
+            await NextAsync(context);
             return;
         }
 
@@ -85,12 +54,8 @@ public class StaticFileHandler : Handler
             ContentTypeProvider.GetContentType(requestedFile);
 
         byte[] bytes = await File.ReadAllBytesAsync(requestedFile);
-
         context.Response.ContentLength64 = bytes.Length;
-
-        await context.Response.OutputStream.WriteAsync(
-            bytes, 0, bytes.Length);
-
+        await context.Response.OutputStream.WriteAsync(bytes, 0, bytes.Length);
         context.Response.Close();
     }
 }
