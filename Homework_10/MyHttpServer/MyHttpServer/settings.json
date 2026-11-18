@@ -1,0 +1,11 @@
+﻿{
+  "Prefixes": [ "http://127.0.0.1:8888/" ],
+  "ConnectionString": "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=",
+  "Email": {
+    "Host": "smtp.yandex.ru",
+    "Port": 587,
+    "SenderEmail": "@yandex.ru",
+    "SenderName": "Имя",
+    "Password": "пароль"
+  }
+}
