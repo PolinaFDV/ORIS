@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${Card.Title} — Wiki</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+
+<header class="header">
+    <a class="logo" href="/home/index">
+        <span class="logo-icon">💣</span>
+        <span>EXPLODING KITTENS</span>
+        <span class="wiki-label">WIKI</span>
+    </a>
+    <nav class="navigation">
+        <a href="/home/index#home">Главная</a>
+        <a href="/home/rules">Правила</a> 
+        <a href="/home/index#cards">Карты</a>
+        <a href="/home/index#expansions">Дополнения</a>
+        <a href="/home/index#faq">FAQ</a>
+    </nav>
+    <a class="admin-link" href="/auth/login">Админ-панель</a>
+</header>
+
+<main class="card-page">
+    <div class="breadcrumbs">
+        <a href="/home/index">Главная</a>
+        <span> / </span>
+        <a href="/home/index#cards">Карты</a>
+        <span> / </span>
+        <span>${Card.Title}</span>
+    </div>
+
+    <section class="card-detail section-panel">
+        <div class="card-detail-image">
+            <img id="card-image" src="/${Card.ImageUrl}" alt="${Card.Title}">
+        </div>
+        <div class="card-detail-content">
+            <span class="card-type ${Card.Type}">${Card.Type}</span>
+            <p class="eyebrow">ДОПОЛНЕНИЕ: ${Expansion.Name}</p>
+            <p class="eyebrow">КАРТА БАЗОВОЙ ИГРЫ</p>
+            <h1 id="card-name">${Card.Title}</h1>
+            <div class="card-short-description">${!Card.Description}</div>
+
+            <div class="card-effect">
+                <span class="effect-title">✦ Эффект карты</span>
+                <div>${!Card.Description}</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-panel card-information">
+        <p class="eyebrow">ПОДРОБНОСТИ</p>
+        <h2>Описание карты</h2>
+        <div>${!Card.Description}</div>
+    </section>
+
+    <div class="back-to-catalog" style="margin-top: 20px;">
+        <a href="/home/index#cards" class="button button-dark">
+            ← Вернуться к каталогу карт
+        </a>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="footer-main">
+        <div class="footer-about">
+            <a class="logo" href="/home/index">
+                <span class="logo-icon">💣</span>
+                <span>EXPLODING KITTENS</span>
+                <span class="wiki-label">WIKI</span>
+            </a>
+            <p>Wiki по настольной игре «Взрывные котята».</p>
+        </div>
+        <div class="footer-column">
+            <h3>Навигация</h3>
+            <a href="/home/index#home">Главная</a>
+            <a href="/home/index#rules">Правила</a>
+            <a href="/home/index#cards">Карты</a>
+        </div>
+        <div class="footer-column">
+            <h3>Полезное</h3>
+            <a href="https://www.explodingkittens.com/pages/instructions">Официальные правила</a>
+            <a href="https://www.explodingkittens.com/pages/comprehensive-field-guide">Справочник карт</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        Фанатский справочник. Все права на оригинальные изображения принадлежат их владельцам.
+    </div>
+</footer>
+
+</body>
+</html>

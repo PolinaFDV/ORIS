@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дополнения — Wiki</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+<header class="header">
+    <a class="logo" href="/home/index">
+        <span class="logo-icon">💣</span>
+        <span>EXPLODING KITTENS</span>
+        <span class="wiki-label">WIKI</span>
+    </a>
+    <nav class="navigation">
+        <a href="/home/index">Главная</a>
+        <a href="/home/rules">Правила</a> 
+        <a href="/home/index#cards">Карты</a>
+        <a href="/home/expansions">Дополнения</a>
+        <a href="/home/faq">FAQ</a>
+    </nav>
+    <a class="admin-link" href="/auth/login">Админ-панель</a>
+</header>
+
+<main class="section-panel" style="margin-top: 40px; margin-bottom: 40px;">
+    <p class="eyebrow">БОЛЬШЕ КАРТ</p>
+    <h2>Дополнения к игре</h2>
+
+    <div class="cards-grid" style="grid-template-columns: repeat(3, 1fr);">
+        $foreach(var exp in Expansions)
+        <div class="game-card" style="padding: 20px; height: 100%;">
+            <h3>${exp.Name}</h3>
+            <p style="color: var(--orange); font-size: 12px; margin-bottom: 10px;">Год выпуска: ${exp.ReleaseYear}</p>
+            <p style="font-size: 14px; color: #d0d0d0;">${exp.Description}</p>
+        </div>
+        $endfor
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="footer-bottom">Фанатский справочник. Все права на оригинальные изображения принадлежат их владельцам.</div>
+</footer>
+</body>
+</html>

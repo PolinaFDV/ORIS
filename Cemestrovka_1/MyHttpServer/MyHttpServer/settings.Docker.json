@@ -1,0 +1,13 @@
+﻿{
+  "Prefixes": [ "http://+:8888/" ],
+  "ConnectionString": "Host=db;Port=5432;Database=exploding_kittens;Username=postgres;Password=1234",
+  "AdminLogin": "admin",
+  "AdminPassword": "1234",
+  "Email": {
+    "Host": "smtp.test.com",
+    "Port": 587,
+    "SenderEmail": "test@test.com",
+    "SenderName": "Test",
+    "Password": "1234"
+  }
+}

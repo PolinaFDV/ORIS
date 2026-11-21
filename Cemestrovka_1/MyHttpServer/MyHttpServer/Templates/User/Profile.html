@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Профиль пользователя</title>
+</head>
+<body>
+<h1>Профиль пользователя</h1>
+<p>Имя: ${Name}</p>
+<p>Возраст: ${Age}</p>
+<p>Email: ${Email}</p>
+
+$if(IsActive)
+<p style="color: green;">Пользователь активен</p>
+$else
+<p style="color: red;">Пользователь неактивен</p>
+$endif
+
+<h3>Роли:</h3>
+<ul>
+    $foreach(var role in Roles)
+    <li>${role}</li>
+    $endfor
+</ul>
+</body>
+</html>

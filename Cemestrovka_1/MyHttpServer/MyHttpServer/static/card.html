@@ -1,0 +1,242 @@
+﻿
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Взрывной котёнок — Wiki</title>
+
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<header class="header">
+    <a class="logo" href="index.html">
+        <span class="logo-icon">💣</span>
+        <span>EXPLODING KITTENS</span>
+        <span class="wiki-label">WIKI</span>
+    </a>
+
+    <nav class="navigation">
+        <a href="index.html#home">Главная</a>
+        <a href="index.html#rules">Правила</a>
+        <a href="index.html#cards">Карты</a>
+        <a href="index.html#expansions">Дополнения</a>
+        <a href="index.html#faq">FAQ</a>
+    </nav>
+
+    <a class="admin-link" href="/auth/login">Админ-панель</a>
+</header>
+
+
+<main class="card-page">
+
+    <div class="breadcrumbs">
+        <a href="index.html">Главная</a>
+        <span> / </span>
+        <a href="index.html#cards">Карты</a>
+        <span> / </span>
+        <span>Взрывной котёнок</span>
+    </div>
+
+
+
+    <section class="card-detail section-panel">
+
+        <div class="card-detail-image">
+            <img
+                    id="card-image"
+                    src=""
+                    alt=""
+            >
+        </div>
+
+        <div class="card-detail-content">
+
+        <span class="card-type danger" id="card-type">
+            Особая карта
+        </span>
+
+            <p class="eyebrow">КАРТА БАЗОВОЙ ИГРЫ</p>
+
+            <h1 id="card-name">Загрузка...</h1>
+
+            <p class="card-short-description" id="card-description">
+            </p>
+
+            <div class="card-effect">
+            <span class="effect-title">
+                ✦ Эффект карты
+            </span>
+
+                <p id="card-effect"></p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="section-panel card-information">
+
+        <p class="eyebrow">ПОДРОБНОСТИ</p>
+
+        <h2>Описание карты</h2>
+
+        <p>
+            Взрывной котёнок — главная опасность в игре.
+            Игроки по очереди вытягивают карты из колоды,
+            стараясь не столкнуться с этой картой.
+        </p>
+
+        <p>
+            Если игрок вытягивает взрывного котёнка,
+            он должен показать карту остальным участникам.
+            После этого необходимо использовать карту
+            «Обезвредить», чтобы остаться в игре.
+        </p>
+
+        <p>
+            Если игрок не может обезвредить взрывного котёнка,
+            он выбывает из партии.
+        </p>
+
+    </section>
+
+
+    <section class="section-panel card-information">
+
+        <p class="eyebrow">ПРАВИЛА ПРИМЕНЕНИЯ</p>
+
+        <h2>Как действует карта?</h2>
+
+        <div class="card-rules">
+
+            <div class="card-rule">
+                <span class="rule-number">01</span>
+                <div>
+                    <h3>Вытягивание</h3>
+                    <p>
+                        Игрок вытягивает карту из колоды
+                        и обнаруживает взрывного котёнка.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card-rule">
+                <span class="rule-number">02</span>
+                <div>
+                    <h3>Попытка спасения</h3>
+                    <p>
+                        Игрок использует карту
+                        «Обезвредить», если она есть у него на руках.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card-rule">
+                <span class="rule-number">03</span>
+                <div>
+                    <h3>Возвращение в колоду</h3>
+                    <p>
+                        После обезвреживания игрок тайно
+                        возвращает взрывного котёнка в любое
+                        место колоды.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="section-panel related-cards">
+
+        <p class="eyebrow">УЗНАЙ БОЛЬШЕ</p>
+
+        <h2>Связанные карты</h2>
+
+        <div class="related-card">
+
+            <img
+                    src="images/cards/Defuse-Via-Participation-in-Kitten-Yoga.webp"
+                    alt="Карта Обезвредить"
+            >
+
+            <div>
+                <h3>Обезвредить</h3>
+
+                <p>
+                    Позволяет спастись при вытягивании
+                    взрывного котёнка.
+                </p>
+
+                <a href="card.html?id=defuse" class="text-link">
+                    Подробнее →
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div class="back-to-catalog">
+        <a href="index.html#cards" class="button button-dark">
+            ← Вернуться к каталогу карт
+        </a>
+    </div>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="footer-main">
+
+        <div class="footer-about">
+            <a class="logo" href="index.html">
+                <span class="logo-icon">💣</span>
+                <span>EXPLODING KITTENS</span>
+                <span class="wiki-label">WIKI</span>
+            </a>
+
+            <p>
+                Wiki по настольной игре
+                «Взрывные котята».
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Навигация</h3>
+            <a href="index.html#home">Главная</a>
+            <a href="index.html#rules">Правила</a>
+            <a href="index.html#cards">Карты</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Полезное</h3>
+            <a href="https://www.explodingkittens.com/pages/instructions">
+                Официальные правила
+            </a>
+            <a href="https://www.explodingkittens.com/pages/comprehensive-field-guide">
+                Справочник карт
+            </a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        Учебный проект. Неофициальный фанатский справочник.
+        Все права на оригинальные изображения принадлежат их владельцам.
+    </div>
+
+</footer>
+
+<script src="scripts/main.js"></script>
+<script src="scripts/cards.js"></script>
+</body>
+</html>
